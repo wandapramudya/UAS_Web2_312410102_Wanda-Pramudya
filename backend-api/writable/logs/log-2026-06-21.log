@@ -1,0 +1,405 @@
+ERROR - 2026-06-21 06:14:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:14:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 06:14:10 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:14:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 06:15:42 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:15:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 06:15:43 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:15:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 06:16:59 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:16:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 06:17:00 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'inventory_db', 3306, '', 0)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`...', Array, false)
+#3 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\app\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+#7 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(974): App\Controllers\TestDb->index()
+#8 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+#9 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\xampp\htdocs\UAS_Web2_312410077_Suripto\backend-api\system\rewrite.php(44): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2026-06-21 06:17:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: testdb]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT `barang`.*, `kategori`.`nama_kategori`, `supplier`.`nama_supplier`
+FROM `barang`
+JOIN `kategori` ON `kategori`.`id` = `barang`.`id_kategori`
+JOIN `supplier` ON `supplier`.`id` = `barang`.`id_supplier`', [], false)
+ 3 SYSTEMPATH\Model.php(255): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\BarangModel.php(43): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\TestDb.php(12): App\Models\BarangModel->getBarangLengkap()
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\TestDb->index()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestDb))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+ERROR - 2026-06-21 07:56:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('userbaru', '$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywK...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (:username:, :password:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\AuthController.php(97): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->register()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 07:56:31 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('userbaru', '$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywK...' at line 1
+[Method: POST, Route: auth/register]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (:username:, :password:, :created_at:, ::)', [...], false)
+ 2 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Controllers\AuthController.php(97): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->register()
+ 8 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 9 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 07:56:31 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('userbaru', '$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywK...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 310.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (:username:, :password:, :created_at:, ::)', [...], false)
+ 4 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH\Controllers\AuthController.php(97): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->register()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')
+CRITICAL - 2026-06-21 07:56:31 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') VALUES ('userbaru', '$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywK...' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 300.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(300): mysqli->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (\'userbaru\', \'$2y$10$gddEZSdsmN9Rkw0egxxrX.KY0fQ6AaxhrD21XOwiQzssywKM0Mwk2\', \'2026-06-21 07:56:31\', \'2026-06-21 07:56:31\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2343): CodeIgniter\Database\BaseConnection->query('INSERT INTO `users` (`username`, `password`, `created_at`, ) VALUES (:username:, :password:, :created_at:, ::)', [...], false)
+ 5 SYSTEMPATH\Model.php(357): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(899): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(670): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(752): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\AuthController.php(97): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\AuthController->register()
+11 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+12 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\UAS_Web2_312410077_Suripto\\backend-api\\public\\index.php')

@@ -1,0 +1,53 @@
+/* ============================================
+   APP GLOBAL STYLES
+   ============================================ */
+
+/* Pastikan semua elemen mengikuti light mode */
+html, body, #root {
+    background-color: #f5f5f5 !important;
+    color: #1a1a2e !important;
+}
+
+/* Link */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tombol umum */
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Input & Select */
+input, select, textarea {
+    background-color: white !important;
+    color: #1a1a2e !important;
+    border: 1px solid #ddd !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1) !important;
+}
+
+/* Table */
+table {
+    background-color: white !important;
+    color: #1a1a2e !important;
+}
+
+table th {
+    background-color: #f8f9fa !important;
+    color: #495057 !important;
+}
+
+table td {
+    color: #212529 !important;
+}
