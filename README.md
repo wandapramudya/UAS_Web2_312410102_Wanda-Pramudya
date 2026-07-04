@@ -17,7 +17,7 @@ Deskripsi singkat: Proyek UAS Pemrograman Web 2 dengan tema Sistem Manajemen Inv
   
   ## Petunjuk Instalasi
   
-1. Clone repositori ini: `git clone [link-repositori-anda]`
+1. Clone repositori ini: `git clone
    
 2. Jalankan backend di folder `backend-api/`
    
