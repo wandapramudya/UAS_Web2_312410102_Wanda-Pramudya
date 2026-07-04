@@ -25,6 +25,6 @@ Deskripsi singkat: Proyek UAS Pemrograman Web 2 dengan tema Sistem Manajemen Inv
    
 ## Link Demo & Presentasi
 
-* **Link Demo:[Klik di sini untuk melihat repositori](https://github.com/wandapramudya/UAS_Web2_312410102_Wanda-Pramudya/new/main?filename=README.md)
+* **Link Demo:[Klik di sini untuk melihat repositori][(https://github.com/wandapramudya/UAS_Web2_312410102_Wanda-Pramudya)
   
 * **Link Video Presentasi: [Klik di sini untuk melihat repositori](https://youtu.be/wgHbmobCzbo?si=KZDGXy7_njJFvEGa)
